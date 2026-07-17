@@ -1,9 +1,26 @@
-# Projekt_Kernel02_JAZRepositoryDummyTemplate
-Neues Repository anhand dieser Vorlage erstellen.
-Das neue Repository lokal clonen.
-Anschliessend in den Eclipse - Projektdateien lokal Änderungen vornehmen.
-Dabei dann den gewünschten Java-Projektnamen vergeben, etc.
+# 1fgl_Test_repo_readwrite
+Teste mit den Tools/Klassen aus dem Projekt JAZxJgit 
+- den Lese-/Schreibzugriff auf Github (commit, push, pull) 
+  ... und damit einhergehend, ob SSH korrekt eingestellt ist,
+  ... die Verwendung von HTTPS klappt etc.
 
-WICHTIG: 
-Es reicht nicht aus dieses Projekt selbst zu klonen und dann die Projektnamens - Umbenennungen durchzuführen.
-Man bekommt dann ja kein eigenständiges Repository und würde nur mit diesem Template Repository arbeiten.
+- das automatisierte Erzeugen von Konflikten und das Auflösen der Konflikte
+  ... Erzeuge dazu in den JUnit Tests folgende Struktur:
+  
+  testdata/
+|
++-- remote.git/           (Bare Repository)
+|
++-- workingcopy_A/
+|
++-- workingcopy_B/
+
+
+Remote
+   ^
+   |
++--+----------------+
+|                   |
+Clone A         Clone B
+
+
